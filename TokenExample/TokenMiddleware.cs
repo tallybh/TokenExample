@@ -16,7 +16,7 @@ namespace TokenExample
             _next = next;
         }
 
-        public Task Invoke(HttpContext httpContext , MyToken token)
+        public Task Invoke(HttpContext httpContext , IMyToken token)
         {
             token.Email = "asd@gamil.com";
             token.Company = "Discount";

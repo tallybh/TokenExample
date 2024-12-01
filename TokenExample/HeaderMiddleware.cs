@@ -16,7 +16,7 @@ namespace TokenExample
             _next = next;
         }
 
-        public Task Invoke(HttpContext httpContext, MyToken t)
+        public Task Invoke(HttpContext httpContext, IMyToken t)
         {
             httpContext.Request.Headers.Add("Token", JsonConvert.SerializeObject(t));
 

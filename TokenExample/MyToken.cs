@@ -2,7 +2,13 @@
 
 namespace TokenExample
 {
-    public class MyToken
+    public interface IMyToken
+    {
+        public string Company { get; set; }
+        public string Email { get; set; }
+    }
+
+    public class MyToken:IMyToken
     {
         public string Company { get; set; }
 
